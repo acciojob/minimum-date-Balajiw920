@@ -1,8 +1,18 @@
 function minDate(dates) {
-  //write you code here
-}
+  if (dates.length === 0) {
+    return null; // Return null if the array is empty
+  }
 
-// Do not change the code
+  let minDate = dates[0]; // Assume the first date is the minimum
+
+  for (let i = 1; i < dates.length; i++) {
+    if (dates[i] < minDate) {
+      minDate = dates[i]; // Update the minimum date if a smaller date is found
+    }
+  }
+
+  return minDate;
+}
 
 var dates = [
   "2023/03/01",
